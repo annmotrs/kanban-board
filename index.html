@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Канбан-доска</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="title-wrapper container">
+      <h1 class="title">Канбан-доска</h1>
+    </div>
+  </header>
+
+  <!-- Форма для добавления задачи -->
+  <div class="container">
+    <form class="form row">
+      <div class="col-auto">
+        <label for="InputForTask" class="form-label">Новая задача</label>
+        <input class="form-control input-add-task" type="text" placeholder="Название задачи..." maxlength="18" id="InputForTask" pattern="^[^\s]+(\s.*)?$" title="Не могут быть пробелы!" required>
+      </div>
+      <div class="col-auto align-self-end">
+        <button type="submit" class="btn btn-primary btn-add-task"><i class="fa fa-plus"></i> Добавить</button>
+      </div>
+    </form>
+  </div>
+
+
+  <!--Отображение задач-->
+  <div class="container">
+    <div class="row">
+
+      <div class="col">
+        <h4><span class="badge bg-secondary">Бэклог</span></h4>
+        <div class="tasks tasks-backlog">
+          <div class="empty-list empty-list-backlog task">
+              <p class="task-text empty-list-text">Бэклог пуст</p>
+          </div>
+
+        </div>
+      </div>
+      
+
+      <div class="col">
+        <h4><span class="badge bg-info">В процессе</span></h4>
+        <div class="tasks tasks-process">
+          <div class="empty-list task">
+              <p class="task-text empty-list-text">В процессе нет задач</p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col">
+        <h4><span class="badge bg-success">Готово</span></h4>
+        <div class="tasks tasks-done">        
+          <div class="empty-list task">
+            <p class="task-text empty-list-text">Ничего не готово</p>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col">
+        <h4><span class="badge bg-danger">Корзина</span></h4>
+        <div class="tasks tasks-basket">
+          <div class="empty-list empty-list-basket task">
+              <p class="task-text empty-list-text">Корзина пуста</p>
+          </div>
+
+        </div>
+
+        <div class="d-grid">
+          <button type="button" class="btn btn-danger btn-lg btn-delete-tasks" disabled><i class="fa fa-times"></i> Очистить</button>
+        </div>  
+      </div>
+
+
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

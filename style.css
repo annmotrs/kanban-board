@@ -1,0 +1,124 @@
+body {
+  background-color: rgb(226, 239, 240);
+}
+
+.header {
+  background-color: #216ed3;
+  
+}
+
+.title-wrapper {
+  color: white;
+  padding: 15px 0px;
+}
+
+.form {
+  background-color: white;
+  padding: 15px;
+  width: fit-content;
+  border-radius: 15px;
+  margin: 30px 0px;
+}
+
+.form-label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.task {
+  min-height: 60px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.task-text {
+  font-weight: bold;
+  padding-top: 15px;
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.empty-list {
+  border: 2px dashed #ccc;
+}
+
+.empty-list-text {
+  color: #ccc;
+}
+
+.box-item {
+  background-color: white;
+}
+
+.tasks-backlog .box-item{
+  border-left: 8px solid #6C757D;
+}
+
+.tasks-process .box-item{
+  border-left: 8px solid #0DCAF0;
+}
+
+.tasks-done .box-item{
+  border-left: 8px solid #198754;
+}
+
+.tasks-basket .box-item{
+  border-left: 8px solid #DC3545;
+}
+
+.btn-update {
+  opacity: 0;
+  border: none;
+  margin-right: 5px;
+}
+
+.btn-update-save {
+  border: none;
+  margin-right: 5px;
+  background-color: rgb(181, 255, 191);
+}
+
+.btn-update-save:hover {
+  background-color: rgb(93, 235, 112);
+}
+
+.box-item:hover .btn-update {
+  opacity: 0.3;
+}
+
+.btn-update:hover {
+  background-color: rgb(122, 193, 235);
+  opacity: 1;
+}
+
+.task-input-update--off {
+  display: none;
+}
+
+.task-text--off {
+  display: none;
+}
+
+.task-input-update {
+  margin: 0px 10px;
+}
+
+.form-for-update {
+  display: flex;
+}
+
+.empty-list--off {
+  display:none; 
+}
+
+.fa {
+  pointer-events: none;
+}
+
+.btn--off {
+  display: none;
+}
+
+.selected {
+  border: 1px dashed #000;
+}
